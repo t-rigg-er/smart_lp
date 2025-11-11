@@ -1,0 +1,70 @@
+/* Noto Sans JPを優先し、英数字はInterを使用 */
+body {
+    font-family: 'Noto Sans JP', 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+/* 見出しやボタンは力強く（ただし強すぎない 700=bold） */
+h1, h2, h3, h4, h5, h6, .font-bold, strong {
+    font-weight: 700;
+}
+
+/* --- ▼▼▼ カラーコード #4682b4 (SteelBlue) ベース ▼▼▼ --- */
+
+/* ヒーローセクションの背景（SteelBlueの明るめグラデーション） */
+.hero-bg {
+    /* #4682b4 (SteelBlue) をベースにしたグラデーション */
+    background: linear-gradient(135deg, #5a9bc8 0%, #4682b4 100%);
+}
+/* CTAセクションの背景（SteelBlueの暗めグラデーション） */
+.cta-bg {
+    background: linear-gradient(135deg, #4682b4 0%, #41729f 100%);
+}
+
+/* CTAボタン（優しいアンバー/黄色） */
+.cta-yellow {
+    background-color: #fcd34d; /* Tailwind: bg-amber-300 */
+    color: #1f2937; /* gray-800 */
+    transition: all 0.3s ease;
+}
+.cta-yellow:hover {
+    background-color: #fde68a; /* Tailwind: bg-amber-200 */
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(70, 130, 180, 0.2); /* 影の色をSteelBlue系に */
+}
+
+/* アクセントカラー（アイコンなど） */
+.accent-color {
+    color: #4682b4; /* SteelBlue */
+}
+/* 強調アイコン（チェックマークなど） */
+.highlight-icon {
+    color: #f59e0b; /* Tailwind: text-amber-500 */
+}
+/* セクション背景（ごく薄い青） */
+.section-bg-light {
+     background-color: #f0f4f8; /* SteelBlueに合うごく薄い青 */
+}
+/* 特典ボックス背景（薄い黄色） */
+.incentive-box-bg {
+    background-color: #fefce8; /* Tailwind: bg-yellow-50 */
+    border-color: #fde68a; /* Tailwind: border-amber-200 */
+}
+
+/* --- ▲▲▲ カラー修正ここまで ▲▲▲ --- */
+
+
+/* --- Googleフォームの高さ制御 --- */
+.google-form-iframe {
+    height: 3500px; /* スマホデフォルトの高さ */
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+@media (min-width: 768px) { /* Tailwindの 'md' ブレークポイント (768px) */
+    .google-form-iframe {
+        height: 2500px; /* PCデフォルトの高さ */
+    }
+}
