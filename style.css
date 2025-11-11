@@ -26,6 +26,13 @@ h1, h2, h3, h4, h5, h6, .font-bold, strong {
     background-color: #fcd34d; /* Tailwind: bg-amber-300 */
     color: #1f2937; /* gray-800 */
     transition: all 0.3s ease;
+    /* --- 追加・修正ここから --- */
+    width: 100%;
+    max-width: 300px; /* スマホでの最大幅を設定 */
+    white-space: normal; /* テキストがはみ出さないように改行を許可 */
+    display: block; /* 中央寄せのためにブロック要素化 */
+    margin: 0 auto; /* 中央寄せ */
+    /* --- 追加・修正ここまで --- */
 }
 .cta-yellow:hover {
     background-color: #fde68a; /* Tailwind: bg-amber-200 */
