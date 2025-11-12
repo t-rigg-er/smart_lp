@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6, .font-bold, strong {
 }
 /* セクション背景（ごく薄い青） */
 .section-bg-light {
-     background-color: #f0f4f8; /* SteelBlueに合うごく薄い青 */
+    background-color: #f0f4f8; /* SteelBlueに合うごく薄い青 */
 }
 /* 特典ボックス背景（薄い黄色） */
 .incentive-box-bg {
@@ -74,4 +74,19 @@ h1, h2, h3, h4, h5, h6, .font-bold, strong {
     .google-form-iframe {
         height: 2500px; /* PCデフォルトの高さ */
     }
+}
+
+/* --- お悩みセクション中央寄せ --- */
+
+/* カード内のテキスト（h3, p）を中央寄せ */
+/* セレクタ: お悩みセクション(bg-white) > グリッド(md:grid-cols-3) > カード(bg-gray-50) */
+section.bg-white div[class*="md:grid-cols-3"] > div[class*="bg-gray-50"] {
+    text-align: center;
+}
+
+/* お悩みセクションのSVGアイコンを中央寄せ */
+/* 他のaccent-color要素（テキスト等）に影響を与えないよう、svgタグに限定 */
+svg.accent-color {
+    margin-left: auto;
+    margin-right: auto;
 }
